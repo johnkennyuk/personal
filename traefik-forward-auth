@@ -5,7 +5,7 @@ traefik-forward-auth () {                # name must match file; make sure it's 
 container_reset                  # do not delete this
 # VARIABLES ####################################################################
 pgrole="traefik-forward-auth"            # name this of the exact file name
-image="thomseddon/traefik-forward-auth"      # image nameto pull
+image="thomseddon/traefik-forward-auth:latest"      # image nameto pull
 port_inside01="80"            # port for inside container
 port_outside01="80"           # port for outside container / how accessed
 port_inside02="443"
