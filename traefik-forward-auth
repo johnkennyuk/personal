@@ -1,6 +1,6 @@
 #!/bin/bash
 ############# https://github.com/plexguide/PlexGuide.com/graphs/contributors ###
-nameoftheapp () {                # name must match file; make sure it's unique
+traefik-forward-auth () {                # name must match file; make sure it's unique
 
 container_reset                  # do not delete this
 # VARIABLES ####################################################################
@@ -32,7 +32,7 @@ container_permissions PGID 1000
 # IMAGES EXPORT - 1ST IS DEFAULT ###############################################
 # how users select an image; the 1st image is the default. If only 1, it's ok!
 cat <<- EOF > "/pg/images/$pgrole.images"
-thomseddon/traefik-forward-auth
+thomseddon/traefik-forward-auth:latest
 EOF
 
 # YML EXPORT ###################################################################
