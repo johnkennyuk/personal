@@ -16,9 +16,9 @@ port_outside03="8083"
 
 # PATHS ########################################################################
 # 1st - path on your server # 2nd - path of the container
-container_path /pg /pg
-container_path /pg/data/$pgrole /config/$pgrole
-container_path /etc/localtime /etc/localtime:ro
+#container_path /pg /pg
+#container_path /pg/data/$pgrole /config/$pgrole
+#container_path /etc/localtime /etc/localtime:ro#
 
 # PERMISSIONS ##################################################################
 # pay attention, to exactly what's required for permissions
@@ -32,7 +32,7 @@ container_permissions PGID 1000
 # IMAGES EXPORT - 1ST IS DEFAULT ###############################################
 # how users select an image; the 1st image is the default. If only 1, it's ok!
 cat <<- EOF > "/pg/images/$pgrole.images"
-
+thomseddon/traefik-forward-auth
 EOF
 
 # YML EXPORT ###################################################################
